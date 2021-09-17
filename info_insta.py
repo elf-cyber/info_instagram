@@ -51,7 +51,9 @@ print(colorama.Fore.YELLOW+"""
 b = input(colorama.Fore.GREEN+'enter the username : ')
 a = requests.get('https://meysam72.tk/api/instainfo.php?url='+b)
 a.encoding = 'utf-8'
-a.text
-print(colorama.Fore.CYAN+'{"created by :@e_l_f_6_6_6"'+a.text +'''
+a.json()
+print(colorama.Fore.CYAN+'{ "craeted by : @e_l_f_6_6_6"'+json.dumps(a.json(), indent=4, separators=(" , ", " ==> :  ")))
+print('''
       
-      "channel_telegram: @elf_security_cyber"      }''')
+      
+         my channel : @elf-security_cyber       }   ''')
